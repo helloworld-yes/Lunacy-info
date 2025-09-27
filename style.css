@@ -123,6 +123,54 @@ body {
   color: #e0e0e0;
 }
 
+.gt-element {
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.goog-te-gadget {
+  background: rgba(42, 42, 62, 0.9) !important;
+  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+  border-radius: 20px !important;
+  padding: 8px !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  background: transparent !important;
+  border: none !important;
+  color: #e0e0e0 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  outline: none !important;
+  padding: 4px !important;
+}
+
+.goog-te-gadget .goog-te-combo option {
+  background: #2a2a3e !important;
+  color: #e0e0e0 !important;
+}
+
+.goog-te-gadget .goog-te-menu-frame .goog-te-menu-item {
+  background: #2a2a3e !important;
+  color: #e0e0e0 !important;
+}
+
+.goog-te-gadget .goog-te-menu-frame .goog-te-menu-item:hover {
+  background: rgba(139, 92, 246, 0.2) !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body div.skiptranslate {
+  display: none !important;
+}
+
 .tab-container {
   max-width: 800px;
   margin: 20px auto;
@@ -283,6 +331,14 @@ body {
     justify-content: center;
   }
 
+  .gt-element {
+    margin: 10px 20px;
+  }
+
+  .goog-te-gadget {
+    padding: 6px !important;
+  }
+
   .logo {
     height: 40px;
   }
@@ -350,6 +406,10 @@ body {
     flex-direction: column;
     gap: 4px;
     padding: 6px;
+  }
+
+  .gt-element {
+    margin: 10px;
   }
 
   .tab-container {
