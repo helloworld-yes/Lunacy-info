@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunacy - Legal Pages</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Lunacy Logo" class="logo">
+            <h1 class="logo-text">Lunacy</h1>
+        </div>
+        <div class="language-selector">
+            <label for="language-select">Language:</label>
+            <select id="language-select" onchange="changeLanguage(event)">
+                <option value="">Select Language</option>
+            </select>
+        </div>
+    </header>
+    
+    <div class="tab-container">
+        <div class="tab-buttons" role="tablist">
+            <button 
+                class="tab-button active" 
+                role="tab" 
+                aria-selected="true" 
+                aria-controls="privacy" 
+                id="privacy-tab"
+                onclick="openTab(event, 'privacy')"
+                tabindex="0"
+            >
+                Privacy Policy
+            </button>
+            <button 
+                class="tab-button" 
+                role="tab" 
+                aria-selected="false" 
+                aria-controls="terms" 
+                id="terms-tab"
+                onclick="openTab(event, 'terms')"
+                tabindex="-1"
+            >
+                Terms of Service
+            </button>
+        </div>
+        
+        <div id="privacy" class="tab-content active" role="tabpanel" aria-labelledby="privacy-tab">
+            <h2>Privacy Policy</h2>
+            <div class="legal-content">
+                <p><strong>Effective Date: September 27, 2025</strong></p>
+                
+                <h3>1. Introduction</h3>
+                <p>Welcome to Lunacy, a Discord bot designed to enhance your server experience with fun commands, moderation tools, and community features. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our bot on the Discord platform.</p>
+                
+                <h3>2. Information We Collect</h3>
+                <p>We collect the following types of information:</p>
+                <ul>
+                    <li><strong>Discord User Data:</strong> Username, user ID, server ID, messages, reactions, and other interactions with the bot. This data is provided by Discord's API and is necessary for the bot to function.</li>
+                    <li><strong>Server Data:</strong> Guild (server) information, channel details, and role assignments to enable bot features like moderation and custom commands.</li>
+                    <li><strong>Usage Data:</strong> Logs of bot commands used, timestamps, and error reports to improve performance and debug issues. No personal identifiable information is stored beyond what's required for operation.</li>
+                    <li><strong>Analytics:</strong> Aggregated, anonymized data on bot usage across servers to understand trends and enhance features.</li>
+                </ul>
+                
+                <h3>3. How We Use Your Information</h3>
+                <p>We use the collected information to:</p>
+                <ul>
+                    <li>Provide and maintain bot functionality, such as responding to commands and managing server interactions.</li>
+                    <li>Improve the bot through analytics and feedback.</li>
+                    <li>Ensure security and prevent abuse, like spam detection.</li>
+                    <li>Communicate updates or important notices via Discord channels.</li>
+                </ul>
+                
+                <h3>4. Sharing Your Information</h3>
+                <p>We do not sell or share your personal information. Data may be shared with:</p>
+                <ul>
+                    <li>Discord Inc. as per their API terms.</li>
+                    <li>Third-party services for hosting and analytics (e.g., anonymized data to Google Analytics), which comply with GDPR/CCPA.</li>
+                </ul>
+                <p>In case of legal requirements, we may disclose data to authorities.</p>
+                
+                <h3>5. Data Storage and Security</h3>
+                <p>Data is stored on secure servers (e.g., Heroku or similar) with encryption in transit (HTTPS) and at rest. Retention period: 30 days for logs, indefinite for essential user IDs unless deleted. We use industry-standard security measures to protect against unauthorized access.</p>
+                
+                <h3>6. Your Rights</h3>
+                <p>Under GDPR (EU) or CCPA (CA), you have rights to access, correct, delete, or object to data processing. Contact us via Discord or email (if provided) to exercise these rights. For server admins, you can remove the bot to stop data collection.</p>
+                
+                <h3>7. Children's Privacy</h3>
+                <p>Our bot is not intended for children under 13. Discord has its own COPPA compliance.</p>
+                
+                <h3>8. Changes to This Policy</h3>
+                <p>We may update this policy. Changes will be announced in the bot's Discord server or via command.</p>
+                
+                <h3>9. Contact Us</h3>
+                <p>For questions, contact the bot developer at [your-email@example.com] or through the Discord server.</p>
+            </div>
+        </div>
+        
+        <div id="terms" class="tab-content" role="tabpanel" aria-labelledby="terms-tab">
+            <h2>Terms of Service</h2>
+            <div class="legal-content">
+                <p><strong>Effective Date: September 27, 2025</strong></p>
+                
+                <h3>1. Acceptance of Terms</h3>
+                <p>By inviting Lunacy to your Discord server or using its commands, you agree to these Terms of Service ("Terms"). If you disagree, do not use the bot. Server admins are responsible for compliance in their servers.</p>
+                
+                <h3>2. Description of Service</h3>
+                <p>Lunacy is a Discord bot providing entertainment, moderation, utility commands, and community tools. Features include fun responses, role management, and custom integrations, subject to Discord's API limits.</p>
+                
+                <h3>3. User Eligibility</h3>
+                <p>You must be at least 13 years old and comply with Discord's Terms. The bot is for non-commercial use only.</p>
+                
+                <h3>4. User Conduct</h3>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Use the bot for illegal activities, harassment, or spam.</li>
+                    <li>Reverse engineer, modify, or distribute the bot's code.</li>
+                    <li>Overload servers or violate rate limits.</li>
+                    <li>Impersonate others or spread misinformation.</li>
+                </ul>
+                <p>We reserve the right to ban users or remove the bot from servers violating these Terms.</p>
+                
+                <h3>5. Intellectual Property</h3>
+                <p>Lunacy and its features are owned by the developer. You may not copy or claim ownership. Discord trademarks are owned by Discord Inc.</p>
+                
+                <h3>6. Disclaimers and Limitations</h3>
+                <p>The bot is provided "as is" without warranties. We are not liable for data loss, downtime, or indirect damages. Liability is limited to $100. Use at your own risk.</p>
+                
+                <h3>7. Termination</h3>
+                <p>We may suspend or terminate access at any time for violations. You can remove the bot from your server.</p>
+                
+                <h3>8. Governing Law</h3>
+                <p>These Terms are governed by the laws of [Your Country/State, e.g., Russia]. Disputes resolved in [Your Jurisdiction] courts.</p>
+                
+                <h3>9. Changes to Terms</h3>
+                <p>We may update these Terms. Continued use constitutes acceptance.</p>
+                
+                <h3>10. Contact Us</h3>
+                <p>For issues, contact [your-email@example.com] or the Discord support server.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Placeholder for favicon files. Add favicon.ico, favicon-16x16.png, favicon-32x32.png, etc., here for browser icons. The folder is created.
