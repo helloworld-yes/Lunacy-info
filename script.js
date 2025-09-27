@@ -27,17 +27,29 @@ function openTab(evt, tabName) {
   evt.currentTarget.focus();
 }
 
-// Функция для смены языка
+// Функция для смены языка через Google Translate
 function changeLanguage(event) {
   const lang = event.target.value;
-  if (lang) {
-    // Для translated страниц, редирект на Translate/index_[lang].html
-    // Для main страницы, то же
-    window.location.href = `Translate/index_${lang}.html`;
+  if (lang && window.google && window.google.translate) {
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event('change'));
+    }
   }
 }
 
-// Загрузка языков при инициализации страницы
+// Инициализация Google Translate
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,es,fr,de,it,pt,ru,zh,ja,ko,ar,hi,nl,sv,no,da,fi,pl,cs,hu,ro,el,tr,he,th,vi,id,ms,fil,uk,be,bg,sr,hr,sl,sk,lt,lv,et,hy,ka,kk,uz,az,mn,fa,ur,bn,ta,te',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+
+// Загрузка языков для селектора (fallback, если GT не загружен)
 document.addEventListener('DOMContentLoaded', function() {
   const select = document.getElementById('language-select');
   if (select) {
